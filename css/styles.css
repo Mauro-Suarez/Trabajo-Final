@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("../img/fondo.jpg");
+    background-size: 100%;
+    max-width: 1200px;
+
+}
+
+header {
+    text-align: center;
+}
+
+header img {
+    width: 25%;
+    padding: 0;
+    margin: 0;
+    border-width: 0;
+}
+
+.icono_nav {
+    width: 100px;
+    border-radius: 50px;
+}
+
+nav ul a:hover {
+    color: blue !important;
+    background-color: rgba(228, 146, 217, 0.432) !important;
+    border-radius: 5px;
+}
+
+nav {
+    z-index: 500;
+    height: fit-content;
+    --bs-navbar-padding-y: 0 !important;
+    --bs-navbar-color: black !important;
+}
+
+
+nav,
+.dropdown-menu {
+    background-color: rgba(224, 255, 255, 0.9);
+    width: 100%;
+}
+
+.navbar-brand {
+    text-align: center;
+    width: 50%;
+    font-size-adjust: initial;
+}
+
+
+article {
+    text-align: center;
+}
+
+section {
+    background: linear-gradient(rgba(16, 16, 16, 0.5), rgba(16, 16, 16, 0.5));
+    margin: 5%;
+    padding: 15px;
+}
+
+section h2,
+h3,
+p {
+    color: white;
+    padding: 15px;
+    text-align: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.mapa {
+    width: 80vw;
+    height: 50vh;
+    max-width: 800px;
+}
+
+.video {
+    width: 640px;
+    max-width: 80vw;
+    height: 480px;
+    max-height: 50vh;
+
+
+}
+
+.icono-arriba {
+    width: 50px;
+    height: 50px;
+}
+
+/* estilo del footer*/
+footer {
+    height: 90%;
+    font-size: larger;
+    text-align: left;
+    padding-left: 5px;
+    border: beige solid;
+    background-color: aliceblue;
+    width: 100%;
+}
+
+footer h3 {
+    text-align: center;
+    color: blueviolet;
+}
+
+footer ul {
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    text-align: center;
+    width: 150px;
+    display: inline-block;
+}
+
+
+
+
+/* estilo de los iconos de los links en el footer*/
+footer img {
+    max-width: 15px;
+}
