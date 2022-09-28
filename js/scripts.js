@@ -10,3 +10,7 @@ function scrollFunction() {
         document.getElementsByTagName("nav")[0].style.backgroundColor = "rgba(224, 255, 255, 0.5)";
     }
 }
+
+function facebook() {
+    window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600'); return false;
+}
