@@ -1,30 +1,3 @@
-/*----------------menu social media share--------------
-i.fa.fa-facebook {
-    color: #fff;
-    background-color: #3b5998;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    font-size: 16px;
-    border-radius: 50%;
-    text-align: center;
-    transition: 0.5s all;
-    -webkit-transition: 0.5s all;
-    -moz-transition: 0.5s all;
-    -o-transition: 0.5s all;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -o-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -ms-transition: 0.5s all;
-}
-
-i.fa.fa-facebook:hover {
-    background-color: #17233E;
-}
-
-----------------------------*/
-
 * {
     margin: 0;
     padding: 0;
@@ -32,8 +5,7 @@ i.fa.fa-facebook:hover {
 
 }
 
-
-
+/*estilos de boy y main usando grid*/
 main {
     display: grid;
     grid-template-columns: 95% auto;
@@ -47,6 +19,7 @@ body {
     margin: auto;
 }
 
+/*estilo del header y sus imagenes*/
 header {
     text-align: center;
 }
@@ -58,12 +31,14 @@ header img {
     border-width: 0;
 }
 
+/*estilo del nav y los links en sus menus*/
 .icono_nav {
     width: 100px;
     border-radius: 50px;
 }
 
-nav ul a:hover {
+.nav-link:hover,
+.dropdown-item:hover {
     color: blue !important;
     background-color: rgba(228, 146, 217, 0.432) !important;
     border-radius: 5px;
@@ -79,7 +54,6 @@ nav {
 }
 
 
-nav,
 .dropdown-menu {
     background-color: rgba(224, 255, 255, 0.9);
     width: 100%;
@@ -91,11 +65,7 @@ nav,
     font-size-adjust: initial;
 }
 
-
-article {
-    text-align: center;
-}
-
+/*estilos de sections y articles con sus estilos de fuente y fondo*/
 section {
     grid-column: 1/2;
     grid-row: 2;
@@ -113,13 +83,19 @@ p {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+article {
+    text-align: center;
+}
 
+
+/*estilo del mapa incrustado*/
 .mapa {
     width: 80vw;
     height: 50vh;
     max-width: 800px;
 }
 
+/*estilo de los videos incrustados*/
 .video {
     width: 640px;
     max-width: 80vw;
@@ -127,6 +103,7 @@ p {
     max-height: 50vh;
 }
 
+/*estilo de aside y el nav con los iconos de las redes sociales para compartir*/
 aside {
     grid-column: 2;
     grid-row: 2;
@@ -136,20 +113,29 @@ aside {
     display: block;
 }
 
-aside nav {
+.nav-share {
     position: fixed;
-    width: 60px;
+    width: 50px;
+    text-align: center;
     transition: all 0.3s linear;
     box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, .4);
     margin-top: 50px;
+    border-radius: 5px;
+    background-color: rgb(132, 235, 29, 0.5);
 }
 
+.nav-share:hover {
+    background-color: rgb(132, 235, 29, 1);
+}
+
+
+/*estilo del ancla*/
 .icono-arriba {
     width: 50px;
     height: 50px;
     opacity: 0.5;
     position: fixed;
-    margin-top: 250px;
+    margin-top: 200px;
 }
 
 .icono-arriba:hover {
@@ -189,6 +175,7 @@ footer img {
 
 }
 
+/* estilo de la tabla y sus fotos*/
 .table {
     background-color: azure;
     vertical-align: middle;
@@ -202,53 +189,35 @@ footer img {
     width: fit-content;
 }
 
+/* cambia de lugar elaside por una fila debajo del nav al reducir el tamaño de la panalla*/
 @media screen and (max-width: 720px) {
 
-    /*
-    main {
-        grid-template-columns: auto;
-        grid-template-rows: auto 100px auto;
-    }
-
-    nav {
-        grid-row: 1;
-    }
-*/
     section {
         grid-row: 3;
         grid-column: 1/3;
     }
 
     aside {
-        background-color: aquamarine;
         grid-row: 2;
         grid-column: 1/3;
-        display: inline-block;
     }
 
-    aside nav {
-        width: auto;
+    .nav-share {
+        width: 200px;
         margin-top: 0;
-        margin-left: 20px;
+        margin-left: 50px;
         transition: all 0.3s linear;
         box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, .4);
+        position: sticky;
     }
 
-    .social li {
+    .submenu {
         display: inline;
+        width: auto;
     }
 
     .icono-arriba {
-        width: 50px;
-        height: 50px;
-        opacity: 0.5;
-        position: fixed;
+
         margin-top: 0;
     }
-
-    /*
-    .icono-arriba {
-        margin: 0;
-
-    }*/
 }
