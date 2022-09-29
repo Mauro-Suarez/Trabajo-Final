@@ -77,7 +77,7 @@ section {
 
 section h2,
 h3,
-
+h4,
 p {
     color: white;
     padding: 15px;
@@ -89,6 +89,7 @@ article {
     text-align: center;
 }
 
+/*de las redes sociales en pagina contactos */
 #articulo-redes {
     background-color: aliceblue;
     width: fit-content;
@@ -164,22 +165,107 @@ aside {
     align-self: start;
     z-index: 10;
     margin: 0;
-    display: block;
 }
 
-.nav-share {
+/* estilos de los iconos de compartir en redes*/
+
+.aside_social {
     position: fixed;
-    width: 50px;
-    text-align: center;
-    transition: all 0.3s linear;
-    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, .4);
-    margin-top: 50px;
-    border-radius: 5px;
-    background-color: rgb(132, 235, 29, 0.5);
 }
 
-.nav-share:hover {
-    background-color: rgb(132, 235, 29, 1);
+.wrapper {
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.wrapper .icon {
+    position: relative;
+    background: #ffffff;
+    border-radius: 50%;
+    padding: 15px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+    background: #1877F2;
+    color: #ffffff;
+}
+
+.wrapper .twitter:hover,
+.wrapper .twitter:hover .tooltip,
+.wrapper .twitter:hover .tooltip::before {
+    background: #1DA1F2;
+    color: #ffffff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+    background: #E4405F;
+    color: #ffffff;
+}
+
+.wrapper .github:hover,
+.wrapper .github:hover .tooltip,
+.wrapper .github:hover .tooltip::before {
+    background: #333333;
+    color: #ffffff;
+}
+
+.wrapper .youtube:hover,
+.wrapper .youtube:hover .tooltip,
+.wrapper .youtube:hover .tooltip::before {
+    background: #CD201F;
+    color: #ffffff;
 }
 
 
@@ -188,19 +274,21 @@ aside {
     width: 50px;
     height: 50px;
     opacity: 0.5;
+    /*
     position: fixed;
-    margin-top: 200px;
+    margin-top: 200px;*/
 }
 
 .icono-arriba:hover {
     opacity: 1;
 }
 
+
 /* estilo del footer*/
 footer {
     height: 100%;
     font-size: larger;
-    text-align: left;
+    text-align: center;
     padding-left: 5px;
     border: beige solid;
     background-color: aliceblue;
@@ -212,21 +300,28 @@ footer h3 {
     color: blueviolet;
 }
 
-footer ul {
-    text-align: center;
-}
-
 footer a {
     text-decoration: none;
-    text-align: center;
-    width: 150px;
     display: inline-block;
 }
 
 /* estilo de los iconos de los links*/
 .icono-redes {
     max-width: 15px;
+}
 
+/* estilo del link para descargar el pdf*/
+#descarga {
+    text-decoration: none;
+}
+
+#descarga h3 {
+    margin: auto;
+    text-decoration: none;
+    background-color: aquamarine;
+    color: coral;
+    width: fit-content;
+    border-radius: 10px;
 }
 
 /* estilo de la tabla y sus fotos*/
@@ -236,6 +331,8 @@ footer a {
     width: fit-content;
     margin: auto;
     max-width: 80vw;
+    border-radius: 10px;
+    border-bottom: 0;
 }
 
 .foto-tabla {
@@ -243,7 +340,18 @@ footer a {
     width: fit-content;
 }
 
-/* cambia de lugar elaside por una fila debajo del nav al reducir el tamaño de la panalla*/
+/*estilo de imagenes enla pagina historia*/
+.img_historia {
+    float: left;
+    padding: 5px;
+}
+
+/*estilo imagen pagina inicio*/
+.donar {
+    max-width: 50vw;
+}
+
+/* cambia de lugar el aside por una fila debajo del nav al reducir el tamaño de la panalla*/
 @media screen and (max-width: 720px) {
 
     section {
@@ -254,24 +362,19 @@ footer a {
     aside {
         grid-row: 2;
         grid-column: 1/3;
-    }
 
-    .nav-share {
-        width: 200px;
-        margin-top: 0;
-        margin-left: 50px;
-        transition: all 0.3s linear;
-        box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, .4);
-        position: sticky;
-    }
-
-    .submenu {
-        display: inline;
-        width: auto;
     }
 
     .icono-arriba {
-
         margin-top: 0;
     }
+
+    .aside_social {
+        opacity: 0.5;
+    }
+
+    .aside_social:hover {
+        opacity: 1;
+    }
+
 }

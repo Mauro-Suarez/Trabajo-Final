@@ -1,3 +1,5 @@
+//cuando scrollea cambia la opacidad del nav
+
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
@@ -25,11 +27,11 @@ if (localStorage.getItem('pageLoadCount') < 1) {
                 break
             }
             else {
-                if (Number.isInteger(+edad) === true) {
+                if (Number.isInteger(+edad) === true && edad != 0) {
                     if (edad < 18) {
                         alert("No puede ingresar porque es menor de 18 años, esta saliendo del sitio.");
                         localStorage.setItem('pageLoadCount', 0);
-                        location.href = ("https://www.google.com")
+                        location.href = ("https://www.google.com");
                         break
                     }
                     else {
@@ -49,10 +51,24 @@ if (localStorage.getItem('pageLoadCount') < 1) {
         }
     } while (edad == null && contador_carga_pag == null);
 }
-// Check if the opened browser
-// window is closed or not
 
-/*
-if (window.closed == true) {
-    alert("Esta saliendo de la web");
-};*/
+//pregunta cuando sale de la pagina evitando peguntar cuando navega dentro de la web y cuando hace click en submit
+
+let deshabilitar_confirmacion = false;
+window.addEventListener('beforeunload', event => {
+    const mensaje_confirma = '¿Seguro quiere salir?';
+    if (!deshabilitar_confirmacion) {
+        event.returnValue = mensaje_confirma;
+        return mensaje_confirma;
+    } else {
+        deshabilitar_confirmacion = false;
+    }
+});
+document.addEventListener('click', event => {
+    if (event.target.tagName.toLowerCase() === 'a') {
+        deshabilitar_confirmacion = true;
+    }
+});
+document.addEventListener('submit', event => {
+    deshabilitar_confirmacion = true;
+});
