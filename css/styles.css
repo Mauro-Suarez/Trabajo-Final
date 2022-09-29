@@ -51,6 +51,7 @@ nav {
     height: fit-content;
     --bs-navbar-padding-y: 0 !important;
     --bs-navbar-color: black !important;
+    background-color: rgba(224, 255, 255, 0.5);
 }
 
 
@@ -76,6 +77,7 @@ section {
 
 section h2,
 h3,
+
 p {
     color: white;
     padding: 15px;
@@ -87,6 +89,14 @@ article {
     text-align: center;
 }
 
+#articulo-redes {
+    background-color: aliceblue;
+    width: fit-content;
+    border-radius: 5px;
+    padding: 10px;
+    margin: auto;
+    text-align: left;
+}
 
 /*estilo del mapa incrustado*/
 .mapa {
@@ -101,6 +111,50 @@ article {
     max-width: 80vw;
     height: 480px;
     max-height: 50vh;
+}
+
+/*estilo de formulario*/
+.form {
+    background-color: antiquewhite;
+    color: black;
+    width: 400px;
+    height: auto;
+    padding: 10px;
+    margin: auto;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.form h5 {
+    text-align: center;
+}
+
+.form input {
+    display: block;
+    width: 70%;
+    color: black;
+    margin: 2px 0 2px 0;
+    font-size: 15px;
+    font-style: normal;
+}
+
+.form textarea {
+    width: 100%;
+    margin: 5px auto;
+    color: black;
+    font-size: 15px;
+    font-style: normal;
+    resize: none;
+}
+
+#enviar {
+    width: 100%;
+    background-color: rgb(39, 190, 39);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    border: 0;
 }
 
 /*estilo de aside y el nav con los iconos de las redes sociales para compartir*/
@@ -169,8 +223,8 @@ footer a {
     display: inline-block;
 }
 
-/* estilo de los iconos de los links en el footer*/
-footer img {
+/* estilo de los iconos de los links*/
+.icono-redes {
     max-width: 15px;
 
 }

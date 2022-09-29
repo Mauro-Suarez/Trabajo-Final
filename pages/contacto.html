@@ -66,18 +66,47 @@
 
 
         <section>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque suscipit, optio nemo aut velit, similique
-                modi, deserunt recusandae esse maiores unde illo natus. Temporibus distinctio neque doloribus hic
-                cumque. Maiores error, quos, fugit modi, exercitationem sit iusto dolore itaque iste pariatur nostrum
-                iure optio? Maiores ipsam cumque labore veritatis ut, ipsa dicta temporibus nam pariatur enim at
-                repellat ea perspiciatis incidunt dolores vero autem. Illum, voluptas eum reiciendis eius unde dolorum
-                minima ipsum officia fugiat dolorem deleniti aut temporibus, obcaecati beatae nisi perspiciatis
-                molestias aliquam eveniet enim aspernatur iure dicta asperiores et. Cupiditate nam illo neque ipsa?
-                Laborum, id enim!</p>
+            <h2>AQUI PUEDE CONTACTARSE CON NOSOTROS</h2>
+            <p><strong>Dirección: </strong> Av. Savio 1381, San Nicolás de los Arroyos, Buenos Aires, Argentina, 2900
+            </p>
+            <p><strong>Teléfono: </strong>0336 448-3021</p>
+            <p><strong>Correo electrónico: </strong>SantaRosaSN@gmail.com</p>
             <article><iframe class=" mapa"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1224.4798728852832!2d-60.19293335428303!3d-33.35749120236929!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b75d9458a4b7df%3A0xa9c539685b9ca05a!2sParroquia%20Santa%20Rosa%20de%20Lima!5e0!3m2!1ses-419!2sar!4v1664072781145!5m2!1ses-419!2sar"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe></article>
+            <article id="articulo-redes">
+                <h5>Nuestras redes</h5>
+
+                <ul>
+                    <li>
+                        <a href="https://www.instagram.com/parroquia.santarosa/" target="_blank">Instragram <img
+                                class="icono-redes" src="../img/insta.png"></a>
+                    </li>
+                    <li><a href="https://www.facebook.com/ParroquiaSantaRosaDeLimaSN" target="_blank">Facebook <img
+                                class="icono-redes" src="../img/face.png"></a></li>
+                </ul>
+            </article>
+            <section>
+                <form class="form" action="">
+                    <h5>Complete los datos para la consulta</h5>
+                    Nombre y apellido:
+                    <input type="text" name="nombre" placeholder="Nombre y apellido" equired pattern="[a-zA-Z ]+"
+                        minlength="1" maxlength="48"
+                        oninvalid="this.setCustomValidity('sin caracteres especiales ni números')" required>
+                    E-mail:<br>
+                    <input type="email" name="e-mail" placeholder="E-mail" minlength="7">
+                    Teléfono:<br>
+                    <input type="tel" name="telefono" placeholder="Teléfono" pattern="[0-9]"
+                        oninvalid="this.setCustomValidity('Ingrese solo números')" required>
+                    Escriba su consulta:
+                    <textarea name="consulta" rows="10" placeholder="Díganos su consulta" minlength="1" maxlength="1000"
+                        required></textarea>
+                    <input type="submit" value="Enviar" id="enviar">
+                </form>
+            </section>
+
+
         </section>
         <aside><a href="#arriba" title="Ir Arriba"> <img class="icono-arriba" src="../img/icono-arriba.png" alt=""></a>
         </aside>
@@ -89,10 +118,10 @@
         <ul>
             <li>
                 <a href="https://www.instagram.com/parroquia.santarosa/" target="_blank">Instragram <img
-                        src="../img/insta.png"></a>
+                        class="icono-redes" src="../img/insta.png"></a>
             </li>
             <li><a href="https://www.facebook.com/ParroquiaSantaRosaDeLimaSN" target="_blank">Facebook <img
-                        src="../img/face.png"></a></li>
+                        class="icono-redes" src="../img/face.png"></a></li>
         </ul>
     </footer>
 
